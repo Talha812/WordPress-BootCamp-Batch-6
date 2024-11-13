@@ -1,0 +1,103 @@
+/* Slide 3: CSS Selectors */
+/* Element Selector */
+h2 { color: teal; text-align: center; }
+
+/* Class Selector */
+.highlight { color: darkorange; font-weight: bold; }
+
+/* ID Selector */
+#unique-section { background-color: #f0f0f0; padding: 15px; border: 2px dashed gray; }
+
+/* Attribute Selector */
+a[target="_blank"] { color: red; text-decoration: none; }
+
+/* Slide 4: CSS Box Model */
+.box {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 15px;
+    background-color: #e0f7fa;
+}
+
+/* Slide 5: Common CSS Properties */
+.styled-text {
+    color: #333;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Slide 6: Colors in CSS */
+.color-box {
+    background-color: #FF5733;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Slide 7: Backgrounds and Images */
+.bg-image {
+    background-image: url("./pexels-christian-heitz-285904-842711.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Slide 8: Flexbox Layout */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+.flex-item {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/* Slide 9: Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+.grid-item {
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Slide 10: Pseudo-Classes and Pseudo-Elements */
+.pseudo-link:hover { color: darkorange; }
+.pseudo-box::before {
+    content: "⭐ ";
+    color: gold;
+    font-size: 1.5em;
+}
+
+/* Slide 11: Responsive Design with Media Queries */
+.responsive {
+    font-size: 16px;
+    padding: 10px;
+    background-color: lightgray;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .responsive { font-size: 14px; background-color: lightblue; }
+    .flex-container { flex-direction: column; }
+}
