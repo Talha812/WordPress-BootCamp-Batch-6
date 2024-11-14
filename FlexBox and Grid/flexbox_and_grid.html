@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox and CSS Grid Demo</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 1%;
+        }
+
+        .container {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .box, .grid-item {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            justify-content: center;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Flexbox Section */
+        .flex-container {
+            display: flex;
+            flex-direction: row;         /* Row direction */
+            flex-wrap: wrap;             /* Enable wrapping */
+            justify-content: space-around; /* Space around items */
+            align-items: center;          /* Center items vertically */
+            gap: 10px;
+        }
+        .flex-item {
+            width: 120px;
+            height: 120px;
+        }
+
+        /* CSS Grid Section */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+            gap: 10px;
+        }
+        .grid-item {
+            padding: 20px;
+            text-align: center;
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Span styles for grid items */
+        .grid-item.span-col {
+            grid-column: span 2; /* Span across 2 columns */
+        }
+        .grid-item.span-row {
+            grid-row: span 2; /* Span across 2 rows */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Flexbox Section -->
+    <section class="container">
+        <h2>Flexbox Example</h2>
+        <div class="flex-container">
+            <div class="flex-item box">Item 1</div>
+            <div class="flex-item box">Item 2</div>
+            <div class="flex-item box">Item 3</div>
+            <div class="flex-item box">Item 4</div>
+            <div class="flex-item box">Item 5</div>
+            <div class="flex-item box">Item 6</div>
+        </div>
+    </section>
+
+    <!-- CSS Grid Section -->
+    <section class="container">
+        <h2>CSS Grid Example</h2>
+        <div class="grid-container">
+            <div class="grid-item span-col">Item 1 (span 2 columns)</div>
+            <div class="grid-item">Item 2</div>
+            <div class="grid-item span-row">Item 3 (span 2 rows)</div>
+            <div class="grid-item">Item 4</div>
+            <div class="grid-item">Item 5</div>
+            <div class="grid-item">Item 6</div>
+        </div>
+    </section>
+
+</body>
+</html>
