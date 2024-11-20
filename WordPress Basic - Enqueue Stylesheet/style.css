@@ -1,0 +1,96 @@
+/**
+ * Theme Name:        My Theme
+ * Theme URI:         https://example.com/fabled-sunset
+ * Description:       This theme is created just for practice. We are learning Theme Development
+ * Version:           1.0.0
+ * Author:            Muhammad Talha
+ * Author URI:        https://example.com
+ * Tags:              block-patterns, full-site-editing
+ * Text Domain:       fabled-sunset
+ * Domain Path:       /assets/lang
+ * Tested up to:      6.4
+ * Requires at least: 6.2
+ * Requires PHP:      7.4
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/* Basic Theme Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styles */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #ccc9c9;
+    padding: 10px 0;
+}
+
+#navbar .navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar .navbar-nav li {
+    margin: 0 20px;
+}
+
+#navbar .navbar-nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#navbar .navbar-nav li a:hover {
+    color: #f39c12;
+}
+
+/* Main Content Styles */
+#content {
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #d85026;
+}
+
+p {
+    font-size: 18px;
+    color: #817272;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+#footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#footer a {
+    color: #f39c12;
+    text-decoration: none;
+}
