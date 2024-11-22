@@ -1,0 +1,169 @@
+/**
+ * Theme Name:        My Theme
+ * Theme URI:         https://example.com/fabled-sunset
+ * Description:       This theme is created just for practice. We are learning Theme Development
+ * Version:           1.0.0
+ * Author:            Muhammad Talha
+ * Author URI:        https://example.com
+ * Tags:              block-patterns, full-site-editing
+ * Text Domain:       fabled-sunset
+ * Domain Path:       /assets/lang
+ * Tested up to:      6.4
+ * Requires at least: 6.2
+ * Requires PHP:      7.4
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/* Basic Theme Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* Header Styles */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    margin-left: 10px;
+}
+
+#img-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Navigation Menu */
+.primary-menu {
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu_items {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu_items li {
+    text-align: center;
+}
+
+.menu_items li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu_items li a:hover {
+    color: red;
+    font-weight: bold;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .primary-menu {
+        display: none; /* Hide menu by default on smaller screens */
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        flex-direction: column;
+        background-color: #444;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .primary-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .menu_items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger icon on small screens */
+    }
+}
+
+/* Main Content Styles */
+#content {
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #0e621b;
+}
+
+p {
+    font-size: 18px;
+    color: #7f1919;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+#footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#footer a {
+    color: #f39c12;
+    text-decoration: none;
+}
