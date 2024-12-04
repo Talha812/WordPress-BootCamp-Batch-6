@@ -1,0 +1,286 @@
+/**
+ * Theme Name:        My Theme
+ * Theme URI:         https://example.com/fabled-sunset
+ * Description:       This theme is created just for practice. We are learning Theme Development
+ * Version:           1.0.0
+ * Author:            Muhammad Talha
+ * Author URI:        https://example.com
+ * Tags:              block-patterns, full-site-editing
+ * Text Domain:       fabled-sunset
+ * Domain Path:       /assets/lang
+ * Tested up to:      6.4
+ * Requires at least: 6.2
+ * Requires PHP:      7.4
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/* Basic Theme Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* Header Styles */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+.logo {
+    margin-left: 10px;
+}
+
+#img-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Navigation Menu */
+.primary-menu {
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.menu_items {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu_items li {
+    text-align: center;
+}
+
+.menu_items li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu_items li a:hover {
+    color: red;
+    font-weight: bold;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .primary-menu {
+        display: none; /* Hide menu by default on smaller screens */
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        flex-direction: column;
+        background-color: #444;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .primary-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .menu_items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger icon on small screens */
+    }
+}
+
+/* Main Content Styles */
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 20px;
+}
+
+.main-content{
+    flex: 60%;
+    max-width: 60%;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.sidebar{
+    flex: 30%;
+    max-width: 40%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1 {
+    font-size: 36px;
+    color: #0e621b;
+}
+
+p {
+    font-size: 18px;
+    color: #7f1919;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+#footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#footer a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination a, 
+.pagination span {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #0073aa;
+    color: #fff;
+}
+
+.pagination .current {
+    background-color: #0073aa;
+    color: #fff;
+}
+
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #333;
+    overflow: hidden;
+}
+
+/* Slide Wrapper */
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+}
+
+/* Individual Slide */
+.slide {
+    flex: 1;
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Navigation Buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Single Post Styling */
+#post-content{
+    height: 768px;
+}
+
+#post-content h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
