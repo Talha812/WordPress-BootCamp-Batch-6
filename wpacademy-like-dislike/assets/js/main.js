@@ -1,0 +1,1 @@
+alert("our plugin is working");
